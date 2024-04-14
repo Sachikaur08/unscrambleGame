@@ -1,0 +1,1984 @@
+<!DOCTYPE html> 
+
+<html> 
+
+    <head> 
+
+        <meta charset="utf-8"> 
+
+        <title>COMP FINAL</title> 
+
+        <style> 
+
+       
+        body{ 
+
+            background-color: rgb(12, 57, 120); 
+
+        } 
+ 
+        input{ 
+
+            text-align:center; 
+
+            border: none; 
+
+             
+
+  
+
+  
+
+        } 
+
+        button:enabled{ 
+
+            background-color: #fa8072;
+
+            color: rgb(0, 0, 0); 
+
+            font-family:ariel; 
+
+             font-size: 24px; 
+
+            
+
+            border-radius: 12px; 
+
+             
+
+        } 
+
+            
+
+        button:disabled{ 
+
+              background-color:rgb(156, 166, 157); 
+
+              color: rgb(0, 0, 0); 
+
+            } 
+
+            
+
+        button:hover, button:active {  
+
+                background-color:rgb(42, 42, 71); 
+
+                color:white; 
+
+            }   
+
+            button:inactive {  
+
+                background-color:rgb(156, 166, 157); 
+
+              color: rgb(0, 0, 0); 
+
+            }  
+
+         
+
+        h2{ 
+
+            color: black; 
+
+            text-align:center; 
+
+            font-size:50px; 
+
+            margin:2%; 
+
+            font-family:ariel; 
+
+             
+
+        } 
+
+        h3{ 
+
+            text-align: center; 
+
+        } 
+
+        #questiontype{ 
+
+            background-color: #fa8072;
+             font-family:ariel; 
+
+        } 
+
+        #instruct{ 
+
+            
+
+            background-color: #fa8072;
+
+            color: #fa8072; 
+
+            font-size:18px; 
+
+            font-family:ariel;  
+
+            text-align:center;   
+
+            border: 3px dotted #fa8072; 
+
+      
+
+             
+
+  
+
+            
+
+        } 
+
+        #score1-id { 
+
+            color:white; 
+
+            text-align: right; 
+
+        } 
+
+        #score2-id { 
+
+            color:white; 
+
+            text-align: right; 
+
+        } 
+
+        #score3-id { 
+
+            color:white; 
+
+            text-align: right; 
+
+        } 
+
+        span { 
+
+            color:white; 
+
+            text-align: right; 
+
+        } 
+
+         
+
+        #reply{ 
+
+            
+
+            text-align: center; 
+
+            font-family: cursive; 
+
+            font-size: 20px; 
+
+            font-weight:bold; 
+
+            color:rgb(255, 255, 255); 
+
+        } 
+
+        #hint{ 
+
+            font-size:20px; 
+
+        } 
+
+        #hintans1{ 
+
+            font-family:ariel;  
+
+            font-size:26px; 
+
+            font-weight:bold; 
+
+            color: rgb(214, 47, 203); 
+
+  
+
+        } 
+
+        #category { 
+
+            text-align: center; 
+
+            width: 50%; 
+
+            font-size:32px; 
+
+            margin: 30px 30px 0px 9px; 
+
+            font-family:cursive; 
+
+            font-weight: bold; 
+
+             
+
+             
+
+        } 
+
+        h1{ 
+
+            color: black; 
+
+            background-color: #fa8072; 
+
+        } 
+
+         
+
+       
+
+        
+
+       img{ 
+
+            border: 3px ridge pink; 
+
+        } 
+
+        .q { 
+
+            border:0px; 
+
+        }  
+
+       .verdict{ 
+
+           border:0px; 
+
+        } 
+
+        #gameover{ 
+
+            text-align:center; 
+
+            color: rgb(255, 0, 153); 
+
+        } 
+
+        #play{ 
+
+             font-size: 39px; 
+
+        } 
+
+        #clickplay{ 
+
+            text-align:center; 
+
+             
+
+        } 
+
+        h4{ 
+
+            color: white; 
+
+            font-size: 30px; 
+
+            text-align: center; 
+
+        } 
+
+        a{ 
+
+            color: white; 
+
+            text-align: right; 
+
+        } 
+
+        ul{ 
+
+            color: white; 
+
+        } 
+
+        ol{ 
+
+            color: white; 
+
+        } 
+
+        #score1{ 
+
+            color: white; 
+
+        } 
+
+        #score2{ 
+
+            color: white; 
+
+        } 
+
+        #score3{ 
+
+            color: white; 
+
+        } 
+
+     #confetti{ 
+
+ 
+
+height: 100%; 
+
+left: 0px; 
+
+position: fixed; 
+
+top: 0px; 
+
+width: 100%; 
+
+z-index: -1; 
+
+} 
+
+    #scorelabel{ 
+
+        text-align:right; 
+
+        font-size: 30 px; 
+
+        color:white; 
+
+    } 
+
+    #score{ 
+
+        text-align: right; 
+
+    } 
+
+    #cumscore1{ 
+
+        text-align: center; 
+
+        color: white; 
+
+    } 
+
+     
+
+    #cumscore2{ 
+
+        text-align: center; 
+
+        color: white; 
+
+    } 
+
+    #cumscore3{ 
+
+text-align: center; 
+
+color: white; 
+
+    } 
+
+#teamnames{ 
+
+    text-align: center; 
+
+} 
+
+#gover-id{ 
+
+ font-size:1px; 
+
+} 
+
+p{ 
+
+ color:white;    
+
+} 
+
+span{ 
+
+ color:white;    
+
+} 
+
+    
+         
+
+        </style> 
+
+    </head> 
+
+        <body> 
+
+  
+
+    
+
+    <!--<h1 id = "category">Quarantine Edition!</h1>--> 
+
+      <img class = "2020img" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Ffaunalytics.org%2Faquatic-animal-welfare-exploring-the-scientific-basis%2F&psig=AOvVaw1oYrp6u7-vf3SAbHlNgoq8&ust=1672818499253000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCPCE2fL0qvwCFQAAAAAdAAAAABAZ" width ="147"height="83"> 
+
+  
+
+<img class = "2020img" src="https://img-aws.ehowcdn.com/877x500/s3-us-west-1.amazonaws.com/contentlab.studiod/getty/35e21697d50d4667b9885fc62bacbe72.jpg" alt="Covid-19 picture" height="83"> 
+
+       
+
+      <img class = "2020img"src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Paarl_RSA_COVID19_panic_shopping.jpg/220px-Paarl_RSA_COVID19_panic_shopping.jpg" alt="Empty shelves in grocery stores" height="83"> 
+
+       
+
+      <img class = "2020img" src="https://upload.wikimedia.org/wikipedia/commons/a/a6/The_Rim_Fire_in_the_Stanislaus_National_Forest_near_in_California_began_on_Aug._17%2C_2013-0004.jpg" alt="Australia Bush Fires" height="83"> 
+
+       
+
+      <img class = "2020img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Olympic_rings_without_rims.svg/300px-Olympic_rings_without_rims.svg.png" alt="Tokyo 2020 Olympics" width = "90"height="83"> 
+
+       
+
+      <img class = "2020img" src="https://upload.wikimedia.org/wikipedia/commons/9/98/Official_calls_and_evening_reception_for_TRH_The_Duke_and_Duchess_of_Sussex_%281%29_%28cropped%29.jpg" alt="Megan and Harry" height="83"> 
+
+       
+
+      <img class = "2020img" src="https://upload.wikimedia.org/wikipedia/commons/b/bf/JMI_students_and_locals_protesting_against_CAA_NRC.jpg" alt="CAA Protests" height="83"> 
+
+       
+
+      <img class = "2020img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Hydroxychloroquine-based-on-xtal-Mercury-3D-balls.png/300px-Hydroxychloroquine-based-on-xtal-Mercury-3D-balls.png" alt="Hydroxychloroquine"  height="83"> 
+
+       
+
+      <img class = "2020img" src="https://upload.wikimedia.org/wikipedia/commons/b/b8/House_of_Representatives_Votes_to_Adopt_the_Articles_of_Impeachment_Against_Donald_Trump.jpg" alt="House of Reps impeach" width = "110" height="83"> 
+
+       
+
+      <img class = "2020img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Amphan_2020-05-19_0736Z.jpg/220px-Amphan_2020-05-19_0736Z.jpg" alt="Amphan Cyclone" width = "110" height="83"> 
+
+       
+
+      <img class = "2020img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Locusta-migratoria-wanderheuschrecke.jpg/330px-Locusta-migratoria-wanderheuschrecke.jpg" width = "90"height="83"> 
+
+      
+
+      <h2 id = "questiontype">BIOLOGIC</h2> 
+
+       <h2 id = "hiddenAns" hidden></h2> 
+
+           
+
+  <div id = "thegame">  
+
+    <div id = "hidediv"> 
+
+    <div class="box">  
+
+<h4>120</h4> 
+
+<a href="#" class="btn-reset">Reset</a> 
+
+</div> 
+
+<!-- 
+
+<img class= "heart" id="heart1" src="https://www.kasandbox.org/programming-images/cute/Heart.png"height="37px" width="42"> 
+
+<img class= "heart" id="heart2" src="https://www.kasandbox.org/programming-images/cute/Heart.png"height="37px" width="42"> 
+
+<img class= "heart" id="heart3" src="https://www.kasandbox.org/programming-images/cute/Heart.png"height="37px" width="42">--><br> 
+
+                <button onclick= "hintfunction()"id="hint" >CLICK FOR A HINT</button> <!--hint--> 
+
+                <span id="hintans1"></span> 
+
+               <br> 
+
+             <br> 
+
+                
+
+                 
+
+                <div id = "instruct"> 
+
+                 
+
+  
+
+    <p>TYPE THE ANSWER HERE: </p> 
+
+     
+
+        <input id ="ans1">   
+
+        <span class = "verdict" id = "correct"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Checkmark_green.svg/1200px-Checkmark_green.svg.png" alt="Check mark" width ="33"height="25"></span> 
+
+      <span class ="verdict" id = "wrong"><img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/X_mark.svg/1200px-X_mark.svg.png" width="33" height="25"></span> 
+
+         <br><br> 
+
+         
+
+        </div><!--instruct --> 
+
+         <div id="correctans"> 
+             <p id="reply"></p>
+             
+         </div>
+
+          
+
+         <p id=  "score" ></p> 
+
+         <p id = "skipans"> </p><!-- <button onclick="back()" >Back</button>--> 
+
+         <button onclick="check()" id = "checkbutton" >CHECK!</button> 
+
+         <button onclick = "giveup()" id = "skip">I GIVE UP!</button> 
+
+        <button onclick = "next()" id ="nextbutton" > NEXT</button> 
+
+                </div>  
+
+<!--<p>Rules:</p> 
+
+<ul> 
+
+    <li>1 hint is available for each scrambled word, and you have only 3 hints in total, so choose carefully.</li> 
+
+    <li>Bhua can only guess after a 10 second timer is finished and there shall be NO discussion with Bhua. (we want to make this as challenging as possible)</li> 
+
+</ul>--> 
+
+        <div id = "clickplay"><button onClick= "next()" id ="play">click to play!</button> 
+
+             
+
+        </div> 
+
+        </div> 
+
+        <div id = "gameover">  
+
+    <h1> WOW THAT WAS AMAZING :) </h1> 
+
+    <p id = "finalscore"> </p> 
+
+    <img src= "https://www.kasandbox.org/programming-images/creatures/Hopper-Cool.png"> 
+
+         
+
+    </div> 
+
+       <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.js"></script> 
+
+<div id="confetti"></div> 
+
+  
+
+       <script src= "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">  </script> 
+
+        
+
+        
+
+        <script> 
+
+   
+
+         $(".verdict").hide(); 
+
+          $("#hidediv").hide(); 
+
+          $("#nextbutton").hide(); 
+
+          $ ("#gameover").hide(); 
+
+           /*if (mouseX >= 5 && mouseX <= 100 && mouseY <= 100 && mouseX >= 130){ 
+
+               ;}*/ 
+
+        //variables or arrays, whatever you want to  call it 
+
+         
+
+            //const questions = ["etoliemdiiopsg", "2. pahman", "3.ebbgeaelngi"," 4. cmyptosamtip","5.nirqcdxooehyuylhor", "6. knuprnbayct","mortality"]; 
+
+            var answers=[ "multicellular", "fibula", "mammals", "paramecium","amoeba","endoskeleton","testosterone", "amphibian","echinodermata","mollusca",  "animalia","exoskeleton", "fungi", "habitat", "hormones", "vertebrates","adrenaline", "reptiles",  "pisces", "pelvis","femur", "patella",
+            "unicellular", "scavenger", "tibia",  "ulna", "estrogen","thyroxine", "pancreas","skeleton","muscle","endocrine","invertebrates","plantae","stirrup" ,"porifera","GAME OVER" ]; 
+           
+
+         
+
+            var facts = ["Multicellular- an organism composed of many cells, which are to varying degrees integrated and independent.", 
+
+             
+
+            "Fibula- The fibula is a long bone in the lower extremity that is positioned on the lateral side of the tibia",  
+
+             
+
+            "Mammals- Mammals include humans and all other animals that are warm-blooded vertebrates", 
+
+             
+
+            "Paramecium- any of a genus of one-celled somewhat slipper-shaped mostly freshwater protozoans that move by cilia.", 
+
+             
+
+            "Amoeba is a unicellular organism that has the ability to change its shape. They are usually found in water bodies such as ponds, lakes and slow-moving rivers.", 
+
+             
+
+            "	Endoskeleton- an internal skeleton or supporting framework in an animal.", 
+
+            "testosterone production is what causes males to develop deeper voices, bigger muscles, and body and facial hair. ", 
+
+             
+
+            "	Amphibian- a cold-blooded vertebrate animal of a class that comprises the frogs, toads, newts, salamanders, and caecilians. They are distinguished by having an aquatic gill-breathing larval stage.", 
+
+             
+
+            "	Echinodermata- Echinoderms are a group of animals that live in on the ocean floor. Examples of echinoderms include starfish, brittle stars, echinoids, sea cucumbers, and sea lilies.", 
+
+             
+
+            "	Mollusca- Mollusks are invertebrates, meaning that they do not have a backbone. They have a soft body that holds the heart, liver, digestive system, and other important organs",
+            
+            
+            
+            
+            "	Animalia- Kingdom Animalia constitutes all animals. Amongst the five kingdoms, the largest kingdom is the animal kingdom."
+            
+            ,
+            
+            
+            "Exoskeleton-  an external supportive covering of an animal "
+            
+            ,
+            
+            
+            "	Fungi- any of a group of spore-producing organisms feeding on organic matter, including moulds, yeast, mushrooms, and toadstools."
+            
+            ,
+            
+            
+              "	habitat can be defined as natural environment of an organism."
+            
+            ,
+            
+            
+            "	Hormone-Hormones are special chemicals your body makes to help it do certain things – like grow up!"
+            
+            ,
+            
+            
+              "		Vertebrates- Animals that possess a backbone are classified as vertebrates "
+            
+            ,
+            
+            
+            "	Adrenaline -  a substance that is released in the body of a person who is feeling a strong emotion"
+            
+            ,
+            
+            "Reptiles- Reptiles are air-breathing vertebrates covered in special skin made up of scales and bony plates."
+            
+            ,
+            
+            "	Pisces- Pisces are permanently aquatic vertebrates that are mainly found in fresh, marine or brackish water."
+            ,
+            "	Pelvis- The pelvis is a basin-shaped structure that supports the spinal column and protects the abdominal organs."
+            ,
+            
+            "•	Femur- the bone of the thigh or upper hindlimb, articulating at the hip and the knee."
+            ,
+            
+            "	Patella- The patella, also known as the kneecap, is a flat, rounded triangular bone which articulates with the femur (thigh bone) and covers and protects the anterior articular surface of the knee joint. "
+            ,
+            
+            "A unicellular organism, also known as a single-celled organism, is an organism that consists of a single cell. Eg amoeba & paramecium"
+            ,
+            
+            "A scavenger is an organism that mostly consumes decaying biomass, such as meat or rotting plant material. Eg hyena, racoon"
+            ,
+            
+            "Tibia is the inner of the two bones of the leg, that extend from the knee to the ankle and articulate with the femur and the talus; shinbone."
+            ,
+            
+            "The ulna is one of two bones that make up the forearm, the other being the radius. It forms the elbow joint with the humerus and also articulates with the radius both proximally and distally."
+            ,
+            
+            "A type of hormone made by the body that helps develop and maintain female sex characteristics and the growth of long bones. It is produced in the ovaries"
+            
+             
+            ,
+            
+            
+            "Thyroxie: the main hormone produced by the thyroid gland, acting to increase metabolic rate and so regulating growth and development."
+            
+            ,
+            
+            "A glandular organ located in the abdomen. It makes pancreatic juices, which contain enzymes that aid in digestion, and it produces several hormones, including insulin."
+            
+            ,
+            
+            "a usually rigid supportive or protective structure or framework of an organism "
+            
+            ,
+            
+            "a band or bundle of fibrous tissue in a human or animal body that has the ability to contract, producing movement in or maintaining the position of parts of the body."
+            ,
+            "glands which secrete hormones or other products directly into the blood."
+            
+            ,
+            
+            "an animal lacking a backbone, such as an arthropod, mollusc, annelid, coelenterate, etc. The invertebrates constitute an artificial division of the animal kingdom, comprising 95 per cent of animal species"
+            
+            ,
+            "the taxonomic kingdom comprising all living or extinct plants"
+            ,
+            
+            "stirrup is a bone in the middle ear of humans and other animals which is involved in the conduction of sound vibrations to the inner ear. This bone is connected to the oval window by its annular ligament, which allows the footplate to transmit sound energy through the oval window into the inner ear."
+            
+            ,
+            " They are multicellular organisms that have bodies full of pores and channels allowing water to circulate through them, consisting of jelly-like mesohyl sandwiched between two thin layers of cells. Eg. Sponge"
+            ]  
+
+          var i = 0; 
+
+          var r = 0; 
+
+          var skipcount = 0; 
+
+          var hintcount = 0; 
+
+          var score = 0; 
+
+           
+
+          //functions 
+
+             
+
+            //  
+
+            function loadQuestion(i){ 
+
+               
+
+        $("#hidediv").show(2000); 
+
+        $("#play").hide(); 
+
+             
+
+                 $("#wrong").hide(); 
+
+                      $("#correct").hide(); 
+
+                var contd = setTimeout(countdown,1000); 
+
+var i = 10; 
+
+$(".box").hide(); 
+
+function countdown(){ 
+
+if (i<12 && i>0) {i--;} else {i = 'Times Up'}; 
+
+console.log(i); 
+
+contd = setTimeout(countdown,1000); 
+
+$('h4').html(i); 
+
+ 
+
+if (i<12 && i>0) { 
+
+$('h4').addClass('secc').removeClass('sec'); 
+
+} else { 
+
+$('h4').addClass('sec').removeClass('secc'); 
+
+};	 
+
+} 
+
+$('.btn-reset').click(function(){ 
+
+i= 11; 
+
+}) 
+
+  
+
+  
+
+                   //document.getElementById("questiontype").innerHTML = questions[i] 
+
+                    document.getElementById("ans1").value = "" 
+
+                   
+
+                     document.getElementById("reply").innerHTML = "" 
+
+                     document.getElementById("hintans1").innerHTML = "" 
+
+                    
+
+      document.getElementById("hiddenAns").innerHTML = answers[r] 
+
+        
+
+                  
+
+                function shuffleWord(word) { 
+
+  var shuffledWord = ''; 
+
+  word = word.split(''); 
+
+  while (word.length > 0) { 
+
+    shuffledWord +=  word.splice(word.length * Math.random() << 0, 1); 
+
+  } 
+
+  return shuffledWord; 
+
+} 
+if (answers[r] == "GAME OVER"){
+      alert("");
+      document.querySelector('#questiontype').innerHTML = answers[r]
+      $ ("#gameover").show();
+      $ ("#thegame").hide();
+      
+     document.querySelector('#finalscore').innerHTML = "your score is " + score
+     
+  }
+  
+
+document.querySelector('#questiontype').innerHTML = shuffleWord(answers[r]) 
+
+                ++r; 
+
+                 
+
+  
+
+  
+
+                     
+
+  
+
+            } 
+
+            
+
+             
+
+             
+
+            function next(){ 
+
+                 
+
+            hintcount =  0; 
+
+               loadQuestion(i); 
+
+               i++; 
+
+                 $("#nextbutton").hide(); 
+
+  
+
+                $("#checkbutton").show(); 
+
+                 document.getElementById("check").disable = false; 
+
+                 
+
+  
+
+               document.getElementById("scoreid").innerHTML = "Your score is " + s + "!!!!";  
+
+                
+
+               function gameover(){
+                   $("#thegame").hide(); 
+
+                  $("#gameover").show(2000); 
+
+                  text("GAME OVER") 
+
+                  document.getElementById("socre").innerHTML = "Your total score is" + totalscore + "/130"; 
+
+                  if (score <= 50){ 
+
+                      text("Please try an easier game or read more about current events and revisit this one later.") 
+
+                       
+
+                  } 
+
+                   if(score > 50 && score <= 80){ 
+
+                      text("Good work but there is definitely room to improve.") 
+
+                  } 
+
+                  else if(score > 80 && score <= 110){ 
+
+                      text("Keep up the good work, you're close to perfect.") 
+
+                  } 
+
+                  else if(score > 110 && score <= 130){ 
+
+                      text("Great job! Almost perfect.") 
+
+                  } 
+
+                  else if(score === 130){ 
+
+                      text("Amazing! You got all the questions correct with full credit") 
+
+                  } 
+
+                   
+
+$(document).ready(function() { 
+
+    var frameRate = 30; 
+
+    var dt = 1.0 / frameRate; 
+
+    var DEG_TO_RAD = Math.PI / 180; 
+
+    var RAD_TO_DEG = 180 / Math.PI; 
+
+    var colors = [ 
+
+        ["#df0049", "#660671"], 
+
+        ["#00e857", "#005291"], 
+
+        ["#2bebbc", "#05798a"], 
+
+        ["#ffd200", "#b06c00"] 
+
+    ]; 
+
+  
+
+    function Vector2(_x, _y) { 
+
+        this.x = _x, this.y = _y; 
+
+        this.Length = function() { 
+
+            return Math.sqrt(this.SqrLength()); 
+
+        } 
+
+        this.SqrLength = function() { 
+
+            return this.x * this.x + this.y * this.y; 
+
+        } 
+
+        this.Equals = function(_vec0, _vec1) { 
+
+            return _vec0.x == _vec1.x && _vec0.y == _vec1.y; 
+
+        } 
+
+        this.Add = function(_vec) { 
+
+            this.x += _vec.x; 
+
+            this.y += _vec.y; 
+
+        } 
+
+        this.Sub = function(_vec) { 
+
+            this.x -= _vec.x; 
+
+            this.y -= _vec.y; 
+
+        } 
+
+        this.Div = function(_f) { 
+
+            this.x /= _f; 
+
+            this.y /= _f; 
+
+        } 
+
+        this.Mul = function(_f) { 
+
+            this.x *= _f; 
+
+            this.y *= _f; 
+
+        } 
+
+        this.Normalize = function() { 
+
+            var sqrLen = this.SqrLength(); 
+
+            if (sqrLen != 0) { 
+
+                var factor = 1.0 / Math.sqrt(sqrLen); 
+
+                this.x *= factor; 
+
+                this.y *= factor; 
+
+            } 
+
+        } 
+
+        this.Normalized = function() { 
+
+            var sqrLen = this.SqrLength(); 
+
+            if (sqrLen != 0) { 
+
+                var factor = 1.0 / Math.sqrt(sqrLen); 
+
+                return new Vector2(this.x * factor, this.y * factor); 
+
+            } 
+
+            return new Vector2(0, 0); 
+
+        } 
+
+    } 
+
+    Vector2.Lerp = function(_vec0, _vec1, _t) { 
+
+        return new Vector2((_vec1.x - _vec0.x) * _t + _vec0.x, (_vec1.y - _vec0.y) * _t + _vec0.y); 
+
+    } 
+
+    Vector2.Distance = function(_vec0, _vec1) { 
+
+        return Math.sqrt(Vector2.SqrDistance(_vec0, _vec1)); 
+
+    } 
+
+    Vector2.SqrDistance = function(_vec0, _vec1) { 
+
+        var x = _vec0.x - _vec1.x; 
+
+        var y = _vec0.y - _vec1.y; 
+
+        return (x * x + y * y + z * z); 
+
+    } 
+
+    Vector2.Scale = function(_vec0, _vec1) { 
+
+        return new Vector2(_vec0.x * _vec1.x, _vec0.y * _vec1.y); 
+
+    } 
+
+    Vector2.Min = function(_vec0, _vec1) { 
+
+        return new Vector2(Math.min(_vec0.x, _vec1.x), Math.min(_vec0.y, _vec1.y)); 
+
+    } 
+
+    Vector2.Max = function(_vec0, _vec1) { 
+
+        return new Vector2(Math.max(_vec0.x, _vec1.x), Math.max(_vec0.y, _vec1.y)); 
+
+    } 
+
+    Vector2.ClampMagnitude = function(_vec0, _len) { 
+
+        var vecNorm = _vec0.Normalized; 
+
+        return new Vector2(vecNorm.x * _len, vecNorm.y * _len); 
+
+    } 
+
+    Vector2.Sub = function(_vec0, _vec1) { 
+
+        return new Vector2(_vec0.x - _vec1.x, _vec0.y - _vec1.y, _vec0.z - _vec1.z); 
+
+    } 
+
+  
+
+    function EulerMass(_x, _y, _mass, _drag) { 
+
+        this.position = new Vector2(_x, _y); 
+
+        this.mass = _mass; 
+
+        this.drag = _drag; 
+
+        this.force = new Vector2(0, 0); 
+
+        this.velocity = new Vector2(0, 0); 
+
+        this.AddForce = function(_f) { 
+
+            this.force.Add(_f); 
+
+        } 
+
+        this.Integrate = function(_dt) { 
+
+            var acc = this.CurrentForce(this.position); 
+
+            acc.Div(this.mass); 
+
+            var posDelta = new Vector2(this.velocity.x, this.velocity.y); 
+
+            posDelta.Mul(_dt); 
+
+            this.position.Add(posDelta); 
+
+            acc.Mul(_dt); 
+
+            this.velocity.Add(acc); 
+
+            this.force = new Vector2(0, 0); 
+
+        } 
+
+        this.CurrentForce = function(_pos, _vel) { 
+
+            var totalForce = new Vector2(this.force.x, this.force.y); 
+
+            var speed = this.velocity.Length(); 
+
+            var dragVel = new Vector2(this.velocity.x, this.velocity.y); 
+
+            dragVel.Mul(this.drag * this.mass * speed); 
+
+            totalForce.Sub(dragVel); 
+
+            return totalForce; 
+
+        } 
+
+    } 
+
+  
+
+    function ConfettiPaper(_x, _y) { 
+
+        this.pos = new Vector2(_x, _y); 
+
+        this.rotationSpeed = Math.random() * 600 + 800; 
+
+        this.angle = DEG_TO_RAD * Math.random() * 360; 
+
+        this.rotation = DEG_TO_RAD * Math.random() * 360; 
+
+        this.cosA = 1.0; 
+
+        this.size = 5.0; 
+
+        this.oscillationSpeed = Math.random() * 1.5 + 0.5; 
+
+        this.xSpeed = 40.0; 
+
+        this.ySpeed = Math.random() * 60 + 50.0; 
+
+        this.corners = new Array(); 
+
+        this.time = Math.random(); 
+
+        var ci = Math.round(Math.random() * (colors.length - 1)); 
+
+        this.frontColor = colors[ci][0]; 
+
+        this.backColor = colors[ci][1]; 
+
+        for (var i = 0; i < 4; i++) { 
+
+            var dx = Math.cos(this.angle + DEG_TO_RAD * (i * 90 + 45)); 
+
+            var dy = Math.sin(this.angle + DEG_TO_RAD * (i * 90 + 45)); 
+
+            this.corners[i] = new Vector2(dx, dy); 
+
+        } 
+
+        this.Update = function(_dt) { 
+
+            this.time += _dt; 
+
+            this.rotation += this.rotationSpeed * _dt; 
+
+            this.cosA = Math.cos(DEG_TO_RAD * this.rotation); 
+
+            this.pos.x += Math.cos(this.time * this.oscillationSpeed) * this.xSpeed * _dt 
+
+            this.pos.y += this.ySpeed * _dt; 
+
+            if (this.pos.y > ConfettiPaper.bounds.y) { 
+
+                this.pos.x = Math.random() * ConfettiPaper.bounds.x; 
+
+                this.pos.y = 0; 
+
+            } 
+
+        } 
+
+        this.Draw = function(_g) { 
+
+            if (this.cosA > 0) { 
+
+                _g.fillStyle = this.frontColor; 
+
+            } else { 
+
+                _g.fillStyle = this.backColor; 
+
+            } 
+
+            _g.beginPath(); 
+
+            _g.moveTo(this.pos.x + this.corners[0].x * this.size, this.pos.y + this.corners[0].y * this.size * this.cosA); 
+
+            for (var i = 1; i < 4; i++) { 
+
+                _g.lineTo(this.pos.x + this.corners[i].x * this.size, this.pos.y + this.corners[i].y * this.size * this.cosA); 
+
+            } 
+
+            _g.closePath(); 
+
+            _g.fill(); 
+
+        } 
+
+    } 
+
+    ConfettiPaper.bounds = new Vector2(0, 0); 
+
+  
+
+    function ConfettiRibbon(_x, _y, _count, _dist, _thickness, _angle, _mass, _drag) { 
+
+        this.particleDist = _dist; 
+
+        this.particleCount = _count; 
+
+        this.particleMass = _mass; 
+
+        this.particleDrag = _drag; 
+
+        this.particles = new Array(); 
+
+        var ci = Math.round(Math.random() * (colors.length - 1)); 
+
+        this.frontColor = colors[ci][0]; 
+
+        this.backColor = colors[ci][1]; 
+
+        this.xOff = Math.cos(DEG_TO_RAD * _angle) * _thickness; 
+
+        this.yOff = Math.sin(DEG_TO_RAD * _angle) * _thickness; 
+
+        this.position = new Vector2(_x, _y); 
+
+        this.prevPosition = new Vector2(_x, _y); 
+
+        this.velocityInherit = Math.random() * 2 + 4; 
+
+        this.time = Math.random() * 100; 
+
+        this.oscillationSpeed = Math.random() * 2 + 2; 
+
+        this.oscillationDistance = Math.random() * 40 + 40; 
+
+        this.ySpeed = Math.random() * 40 + 80; 
+
+        for (var i = 0; i < this.particleCount; i++) { 
+
+            this.particles[i] = new EulerMass(_x, _y - i * this.particleDist, this.particleMass, this.particleDrag); 
+
+        } 
+
+        this.Update = function(_dt) { 
+
+            var i = 0; 
+
+            this.time += _dt * this.oscillationSpeed; 
+
+            this.position.y += this.ySpeed * _dt; 
+
+            this.position.x += Math.cos(this.time) * this.oscillationDistance * _dt; 
+
+            this.particles[0].position = this.position; 
+
+            var dX = this.prevPosition.x - this.position.x; 
+
+            var dY = this.prevPosition.y - this.position.y; 
+
+            var delta = Math.sqrt(dX * dX + dY * dY); 
+
+            this.prevPosition = new Vector2(this.position.x, this.position.y); 
+
+            for (i = 1; i < this.particleCount; i++) { 
+
+                var dirP = Vector2.Sub(this.particles[i - 1].position, this.particles[i].position); 
+
+                dirP.Normalize(); 
+
+                dirP.Mul((delta / _dt) * this.velocityInherit); 
+
+                this.particles[i].AddForce(dirP); 
+
+            } 
+
+            for (i = 1; i < this.particleCount; i++) { 
+
+                this.particles[i].Integrate(_dt); 
+
+            } 
+
+            for (i = 1; i < this.particleCount; i++) { 
+
+                var rp2 = new Vector2(this.particles[i].position.x, this.particles[i].position.y); 
+
+                rp2.Sub(this.particles[i - 1].position); 
+
+                rp2.Normalize(); 
+
+                rp2.Mul(this.particleDist); 
+
+                rp2.Add(this.particles[i - 1].position); 
+
+                this.particles[i].position = rp2; 
+
+            } 
+
+            if (this.position.y > ConfettiRibbon.bounds.y + this.particleDist * this.particleCount) { 
+
+                this.Reset(); 
+
+            } 
+
+        } 
+
+        this.Reset = function() { 
+
+            this.position.y = -Math.random() * ConfettiRibbon.bounds.y; 
+
+            this.position.x = Math.random() * ConfettiRibbon.bounds.x; 
+
+            this.prevPosition = new Vector2(this.position.x, this.position.y); 
+
+            this.velocityInherit = Math.random() * 2 + 4; 
+
+            this.time = Math.random() * 100; 
+
+            this.oscillationSpeed = Math.random() * 2.0 + 1.5; 
+
+            this.oscillationDistance = Math.random() * 40 + 40; 
+
+            this.ySpeed = Math.random() * 40 + 80; 
+
+            var ci = Math.round(Math.random() * (colors.length - 1)); 
+
+            this.frontColor = colors[ci][0]; 
+
+            this.backColor = colors[ci][1]; 
+
+            this.particles = new Array(); 
+
+            for (var i = 0; i < this.particleCount; i++) { 
+
+                this.particles[i] = new EulerMass(this.position.x, this.position.y - i * this.particleDist, this.particleMass, this.particleDrag); 
+
+            } 
+
+        } 
+
+        this.Draw = function(_g) { 
+
+            for (var i = 0; i < this.particleCount - 1; i++) { 
+
+                var p0 = new Vector2(this.particles[i].position.x + this.xOff, this.particles[i].position.y + this.yOff); 
+
+                var p1 = new Vector2(this.particles[i + 1].position.x + this.xOff, this.particles[i + 1].position.y + this.yOff); 
+
+                if (this.Side(this.particles[i].position.x, this.particles[i].position.y, this.particles[i + 1].position.x, this.particles[i + 1].position.y, p1.x, p1.y) < 0) { 
+
+                    _g.fillStyle = this.frontColor; 
+
+                    _g.strokeStyle = this.frontColor; 
+
+                } else { 
+
+                    _g.fillStyle = this.backColor; 
+
+                    _g.strokeStyle = this.backColor; 
+
+                } 
+
+                if (i == 0) { 
+
+                    _g.beginPath(); 
+
+                    _g.moveTo(this.particles[i].position.x, this.particles[i].position.y); 
+
+                    _g.lineTo(this.particles[i + 1].position.x, this.particles[i + 1].position.y); 
+
+                    _g.lineTo((this.particles[i + 1].position.x + p1.x) * 0.5, (this.particles[i + 1].position.y + p1.y) * 0.5); 
+
+                    _g.closePath(); 
+
+                    _g.stroke(); 
+
+                    _g.fill(); 
+
+                    _g.beginPath(); 
+
+                    _g.moveTo(p1.x, p1.y); 
+
+                    _g.lineTo(p0.x, p0.y); 
+
+                    _g.lineTo((this.particles[i + 1].position.x + p1.x) * 0.5, (this.particles[i + 1].position.y + p1.y) * 0.5); 
+
+                    _g.closePath(); 
+
+                    _g.stroke(); 
+
+                    _g.fill(); 
+
+                } else if (i == this.particleCount - 2) { 
+
+                    _g.beginPath(); 
+
+                    _g.moveTo(this.particles[i].position.x, this.particles[i].position.y); 
+
+                    _g.lineTo(this.particles[i + 1].position.x, this.particles[i + 1].position.y); 
+
+                    _g.lineTo((this.particles[i].position.x + p0.x) * 0.5, (this.particles[i].position.y + p0.y) * 0.5); 
+
+                    _g.closePath(); 
+
+                    _g.stroke(); 
+
+                    _g.fill(); 
+
+                    _g.beginPath(); 
+
+                    _g.moveTo(p1.x, p1.y); 
+
+                    _g.lineTo(p0.x, p0.y); 
+
+                    _g.lineTo((this.particles[i].position.x + p0.x) * 0.5, (this.particles[i].position.y + p0.y) * 0.5); 
+
+                    _g.closePath(); 
+
+                    _g.stroke(); 
+
+                    _g.fill(); 
+
+                } else { 
+
+                    _g.beginPath(); 
+
+                    _g.moveTo(this.particles[i].position.x, this.particles[i].position.y); 
+
+                    _g.lineTo(this.particles[i + 1].position.x, this.particles[i + 1].position.y); 
+
+                    _g.lineTo(p1.x, p1.y); 
+
+                    _g.lineTo(p0.x, p0.y); 
+
+                    _g.closePath(); 
+
+                    _g.stroke(); 
+
+                    _g.fill(); 
+
+                } 
+
+            } 
+
+        } 
+
+        this.Side = function(x1, y1, x2, y2, x3, y3) { 
+
+            return ((x1 - x2) * (y3 - y2) - (y1 - y2) * (x3 - x2)); 
+
+        } 
+
+    } 
+
+    ConfettiRibbon.bounds = new Vector2(0, 0); 
+
+    confetti = {}; 
+
+    confetti.Context = function(parent) { 
+
+        var i = 0; 
+
+        var canvasParent = document.getElementById(parent); 
+
+        var canvas = document.createElement('canvas'); 
+
+        canvas.width = canvasParent.offsetWidth; 
+
+        canvas.height = canvasParent.offsetHeight; 
+
+        canvasParent.appendChild(canvas); 
+
+        var context = canvas.getContext('2d'); 
+
+        var interval = null; 
+
+        var confettiRibbonCount = 7; 
+
+        var rpCount = 30; 
+
+        var rpDist = 8.0; 
+
+        var rpThick = 8.0; 
+
+        var confettiRibbons = new Array(); 
+
+        ConfettiRibbon.bounds = new Vector2(canvas.width, canvas.height); 
+
+        for (i = 0; i < confettiRibbonCount; i++) { 
+
+            confettiRibbons[i] = new ConfettiRibbon(Math.random() * canvas.width, -Math.random() * canvas.height * 2, rpCount, rpDist, rpThick, 45, 1, 0.05); 
+
+        } 
+
+        var confettiPaperCount = 25; 
+
+        var confettiPapers = new Array(); 
+
+        ConfettiPaper.bounds = new Vector2(canvas.width, canvas.height); 
+
+        for (i = 0; i < confettiPaperCount; i++) { 
+
+            confettiPapers[i] = new ConfettiPaper(Math.random() * canvas.width, Math.random() * canvas.height); 
+
+        } 
+
+        this.resize = function() { 
+
+            canvas.width = canvasParent.offsetWidth; 
+
+            canvas.height = canvasParent.offsetHeight; 
+
+            ConfettiPaper.bounds = new Vector2(canvas.width, canvas.height); 
+
+            ConfettiRibbon.bounds = new Vector2(canvas.width, canvas.height); 
+
+        } 
+
+        this.start = function() { 
+
+            this.stop() 
+
+            var context = this 
+
+            this.interval = setInterval(function() { 
+
+                confetti.update(); 
+
+            }, 1000.0 / frameRate) 
+
+        } 
+
+        this.stop = function() { 
+
+            clearInterval(this.interval); 
+
+        } 
+
+        this.update = function() { 
+
+            var i = 0; 
+
+            context.clearRect(0, 0, canvas.width, canvas.height); 
+
+            for (i = 0; i < confettiPaperCount; i++) { 
+
+                confettiPapers[i].Update(dt); 
+
+                confettiPapers[i].Draw(context); 
+
+            } 
+
+            for (i = 0; i < confettiRibbonCount; i++) { 
+
+                confettiRibbons[i].Update(dt); 
+
+                confettiRibbons[i].Draw(context); 
+
+            } 
+
+        } 
+
+    } 
+
+    var confetti = new confetti.Context('confetti'); 
+
+    confetti.start(); 
+
+    $(window).resize(function() { 
+
+        confetti.resize(); 
+
+    }); 
+
+}); 
+
+                } 
+
+  
+
+                 
+
+                document.getElementById("hint").disable = false; 
+
+  
+
+                 
+
+            } 
+               
+                
+
+            function giveup(){ 
+
+                 var j = answers.indexOf(document.getElementById("hiddenAns").innerHTML); 
+
+                
+
+                
+
+                    document.getElementById("reply").innerHTML ="The answer is " + answers[j] 
+
+                    $("#nextbutton").fadeIn(2000) 
+
+       } 
+
+             
+
+           function check(){ 
+
+             
+
+               
+
+               var j = answers.indexOf(document.getElementById("hiddenAns").innerHTML); 
+
+                
+
+                 if( ans1.value == hiddenAns.innerHTML  ){ 
+
+                      
+
+                
+
+                    document.getElementById("reply").innerHTML =facts[j] 
+
+                      if (hintcount === 1){ 
+
+                         score += 5; 
+
+                          
+
+                     } 
+
+                      else if (hintcount === 2){ 
+
+                         score += 2; 
+
+                          
+
+                     } 
+
+                     else if (hintcount === 0){ 
+
+                         score += 10; 
+
+                          
+
+                     } 
+
+                      
+
+                     document.getElementById("score").innerHTML = "your score is " + score  
+ 
+                     $("#checkbutton").hide(2000); 
+
+                      
+
+                            $("#nextbutton").fadeIn(2000); 
+
+                            $("#wrong").hide(); 
+
+                      $("#correct").hide(); 
+
+                            $("#correct").fadeIn(); 
+
+                     
+
+  
+
+                     
+
+                    } 
+
+                    else{ 
+
+                      document.getElementById("reply").innerHTML = "TRY AGAIN!"  
+
+                      $("#wrong").hide(); 
+
+                      $("#correct").hide(); 
+
+                      $("#wrong").fadeIn(); 
+
+                    } 
+
+                     
+
+                 
+
+            } 
+
+            function hintfunction(){ 
+
+          
+
+          var first  = answers[r-1].charAt(0); 
+
+         var last = answers[r-1].slice(-1); 
+
+          //var letter2 = answers[] 
+
+  
+
+                hintcount++; 
+
+                 var j = answers.indexOf(document.getElementById("hiddenAns").innerHTML); 
+
+                  
+
+                 if (hintcount === 1){ 
+
+  
+
+         
+
+                        document.getElementById("hintans1").innerHTML =  "the first letter is " + first 
+
+                        hintcount === 2 ; 
+
+             } 
+
+              
+
+             else if (hintcount === 2){ 
+
+                document.getElementById("hintans1").innerHTML =  "the last letter is " + last 
+
+                        hintcount === 3 ; 
+
+             } 
+
+            else  if (hintcount === 3){ 
+
+  
+
+             
+
+                 
+
+  
+
+                        document.getElementById("hintans1").innerHTML =  "you have only 2 hints per question :(" 
+
+                        hintcount === 3 ; 
+
+             } 
+
+                    /*if(quescount === 1){ 
+
+                         
+
+       if(gamecount === 2 ) 
+
+       { 
+
+    $("#heart1").hide(); 
+
+     
+
+} 
+
+else if(gamecount === 3 ){ 
+
+     
+
+$("#heart2").hide(); 
+
+  
+
+} 
+
+else { 
+
+     
+
+    $("#heart3").hide(); 
+
+} 
+
+  
+
+quescount=0; 
+
+}*/ 
+
+else{ 
+
+     
+
+document.getElementById("hint").disable = true; 
+
+} 
+
+                     
+
+    
+
+//j = count; 
+
+  
+
+  
+
+  
+
+  
+
+   
+
+  
+
+    
+
+     
+
+  
+
+  
+
+  
+
+                 
+
+  
+
+  
+
+} 
+
+           /* function back(){ 
+
+                     var j = answers.indexOf(document.getElementById("hiddenAns").innerHTML); 
+
+if (j > 0){ 
+
+            loadQuestion(j-1);} 
+
+            i=j; 
+
+            
+
+             
+
+            }*/ 
+
+          
+
+  
+
+           
+
+            
+
+           var input = document.getElementById("ans1"); 
+
+            
+
+input.addEventListener("keyup", function(event) { 
+
+   
+
+  if (event.keyCode === 13) { 
+
+    
+
+   
+
+    event.preventDefault(); 
+
+     
+
+   check(); 
+
+  } 
+
+}); 
+
+            
+
+             
+
+              
+
+         
+
+             
+
+        </script> 
+
+  
+
+  
+
+    </body> 
+
+</html> 
+
+ 
+
+ 
